@@ -1,0 +1,42 @@
+.button {
+    padding: 10px 20px;
+    border: 1px solid #5DD800;
+    text-decoration: none;
+    color: black;
+    /*background-color: #5DD800;*/
+    border-radius: 6px;
+}
+
+.navbar {
+   /* background-color: #5DD800;*/
+    padding: 25px;
+    text-align: center;
+}
+
+.navbar a {
+    /*color:white;*/
+    text-decoration: none;
+    margin:0px;
+    padding-left: 4%;
+    padding-right: 4%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #66e901;
+    border-color: rgb(161, 255, 152);
+}
+
+.button.active {
+    background-color: #66e901;
+    border-color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+head {
+    text-align: center;
+}

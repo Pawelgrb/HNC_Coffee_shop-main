@@ -3,18 +3,15 @@
     border: 1px solid #5DD800;
     text-decoration: none;
     color: black;
-    /*background-color: #5DD800;*/
     border-radius: 6px;
 }
 
 .navbar {
-   /* background-color: #5DD800;*/
     padding: 25px;
     text-align: center;
 }
 
 .navbar a {
-    /*color:white;*/
     text-decoration: none;
     margin:0px;
     padding-left: 4%;
@@ -39,4 +36,61 @@ h1 {
 
 head {
     text-align: center;
+}
+
+.checkout-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid #888;
+    background: #eee;
+
+}
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+}
+.product-img {
+    height: 150px;
+    width: 150px;
+    background-color: #cfcfcf;
+    display: grid;
+    place-items: center;
+
+}
+.shop-header {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0 20px;
+}
+
+.buy-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid #888;
+    background: #eee;
+    font-size: 15px;
+
+}
+.product-row {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.product-name {
+  margin: 0 0 6px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.buy-btn:active {
+    background-color: #ddd;
+    border-color: #aaa;
 }

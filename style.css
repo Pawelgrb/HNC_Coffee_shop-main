@@ -94,3 +94,13 @@ head {
     background-color: #ddd;
     border-color: #aaa;
 }
+
+.checkout-btn:active {
+    background-color: #ddd;
+    border-color: #aaa;
+}
+
+.social {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}

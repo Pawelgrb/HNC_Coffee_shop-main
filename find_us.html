@@ -24,14 +24,14 @@
         <h5>3 County Pl, Paisley PA1 1BN</h5>
         <section>
             <h2>Contact Us</h2>
-            <form>
+            <form onsubmit="sendMessage(event)">
                 <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name"><br><br>
                 <label for="email">Email:</label><br>
                     <input type="email" id="email" name="email"><br><br>
                 <label for="message">Message:</label><br>
-                    <textarea for="message" name="message"></textarea><br><br>
-                    <button type="send">Send</button>
+                    <textarea id="message" name="message"></textarea><br><br>
+                    <button type="submit">Send</button>
         </form>
     </div>
     </section>

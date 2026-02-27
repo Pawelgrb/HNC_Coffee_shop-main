@@ -249,7 +249,6 @@ function ShopImageFallbacks() {
                 addCandidate(decoded);
                 addCandidate(`/${decoded}`);
             } catch (error) {
-                // Ignore malformed URI sequences.
             }
         }
         let candidateIndex = 0;

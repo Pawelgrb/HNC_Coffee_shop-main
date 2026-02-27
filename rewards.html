@@ -7,6 +7,7 @@
         <script src="script.js"></script>
         <link rel="stylesheet" href="style.css"/>
     </head>
+    <body>
     <header>
         <h1>Bean & Brew</h1>
     </header>
@@ -20,20 +21,22 @@
         </div>
     </nav>
 
-    <div style="margin-top: 60px; text-align: center;">
+    <main class="page">
+    <div class="rewards-code">
         <label>Insert the code from your bill to have a chance to win a free coffee</label>
         <input type="text" id="code" required>
         <button class="button-submit" onclick="checkCode()">Submit</button>
     </div>
-    <div style="margin-top: 60px; text-align: center;">
+    <div class="rewards-app">
         <h1>OR</h1>
         <p>downoad our app and redeem your coffee on the go</p>
         <div>
-            <ul>
-                <li><a href="https://play.google.com/store/apps" target="blank"><img src="./pictures/Google_play_store_logo.png" alt="Google Play link" height="85" width="260"></a></li>
-                <li><a href="https://apps.apple.com/us/iphone/today" target="blank"><img  src="./pictures/Apple_logo.png" alt="Apple App Store link" height="100" width="300"></a></li>
+            <ul class="app-links">
+                <li><a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer"><img src="./pictures/Google_play_store_logo.png" alt="Google Play link" height="85" width="260"></a></li>
+                <li><a href="https://apps.apple.com/us/iphone/today" target="_blank" rel="noopener noreferrer"><img src="./pictures/Apple_logo.png" alt="Apple App Store link" height="100" width="300"></a></li>
             </ul>
         </div>
     </div>
-    
+    </main>
+    </body>
 </html>

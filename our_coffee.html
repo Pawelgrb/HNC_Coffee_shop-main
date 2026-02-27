@@ -1,12 +1,13 @@
-<!DOCtYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset = "UTF-8">
-        <meta name ="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>BEAN & BREW</title>
         <script src="script.js"></script>
         <link rel="stylesheet" href="style.css"/>
     </head>
+    <body>
     <header>
         <h1>Bean & Brew</h1>
     </header>
@@ -19,34 +20,31 @@
             <a href="find_us.html" class="button">Find Us</a>
         </div>
     </nav>
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div style="flex: 1;">
-            <h1>From Harvest</h1>
-            <p>Our coffee begins long before it reaches your cup. Grown at high altitudes in rich volcanic soil,
-                 each bean is carefully cultivated by farmers who understand that quality starts at the root. The
-                  cherries are hand-picked at peak ripeness, ensuring only the best make the journey forward. 
-                  It’s slow work. Intentional work. The kind that respects the land as much as the final flavor.</p>
+    <main class="page">
+        <div class="story-row">
+            <div class="story-copy">
+                <h1>From Harvest</h1>
+                <p>Our coffee begins long before it reaches your cup. Grown at high altitudes in rich volcanic soil, each bean is carefully cultivated by farmers who understand that quality starts at the root. The cherries are hand-picked at peak ripeness, ensuring only the best make the journey forward. It is slow work. Intentional work. The kind that respects the land as much as the final flavor.</p>
+            </div>
+            <img class="story-photo" src="./pictures/harvest.png" alt="A picture of a coffee harvest" height="450" width="700">
         </div>
-        <img src="pictures/harvest.png" alt="A picture of a coffee harvest" height="450" width="700">
-    </div>
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div style="flex: 1;">
-            <img src="pictures/roasting_coffee.png" alt="A picture of a coffee being roasted" height="450" width="700">
+        <div class="story-row reverse">
+            <div class="story-copy">
+                <img class="story-photo" src="./pictures/roasting_coffee.png" alt="A picture of a coffee being roasted" height="450" width="700">
+            </div>
+            <div class="story-copy">
+                <h1>Through Roasting</h1>
+                <p>Roasting is where character is revealed. In small batches, we carefully control time and temperature to unlock the natural notes hidden inside every bean: chocolate, citrus, caramel, spice. It is part science, part instinct. Too little heat and the flavor stays asleep. Too much and it is lost forever. Precision matters. Patience matters more.</p>
+            </div>
         </div>
-        <div style="flex: 1;">
-            <h1>Through roasting</h1>
-            <p>Roasting is where character is revealed. In small batches, we carefully control time and temperature
-                 to unlock the natural notes hidden inside every bean — chocolate, citrus, caramel, spice. It’s part science,
-                  part instinct. Too little heat and the flavor stays asleep. Too much and it’s lost forever. Precision matters. Patience matters more.</p>
+        <div>
+            <h1>To You</h1>
         </div>
-    </div>
-    <div>
-        <h1>To you</h1>
-    </div>
-            <div style="text-align: center;">
-            <img src="pictures/Coffee3.png" alt="A picture of a coffee" height="250" width="450">
-            <img src="pictures/team.png" alt="A picture of our team" height="250" width="450">
-            <img src="pictures/coffee4.png" alt="A picture of a coffee " height="250" width="450">
-    </div>
-
+        <div class="coffee-gallery">
+            <img src="./pictures/Coffee3.png" alt="A picture of a coffee" height="250" width="450">
+            <img src="./pictures/team.png" alt="A picture of our team" height="250" width="450">
+            <img src="./pictures/coffee4.png" alt="A picture of a coffee" height="250" width="450">
+        </div>
+    </main>
+    </body>
 </html>

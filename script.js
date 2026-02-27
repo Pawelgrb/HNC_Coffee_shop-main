@@ -215,8 +215,56 @@ function ShopPage() {
         });
     });
 }
+
+function ShopImageFallbacks() {
+    const productImages = Array.from(document.querySelectorAll(".shop-grid .product-img img"));
+    if (!productImages.length) {
+        return;
+    }
+    productImages.forEach((image) => {
+        const startSrc = image.getAttribute("src");
+        if (!startSrc) {
+            return;
+        }
+        const candidates = [];
+        const addCandidate = (value) => {
+            if (!value || candidates.includes(value)) {
+                return;
+            }
+            candidates.push(value);
+        };
+        addCandidate(startSrc);
+        const trimmedSrc = startSrc.replace(/^\.?\//, "");
+        if (trimmedSrc.startsWith("pictures/")) {
+            addCandidate(`./${trimmedSrc}`);
+            addCandidate(trimmedSrc);
+            addCandidate(`/${trimmedSrc}`);
+            const encoded = encodeURI(trimmedSrc);
+            addCandidate(`./${encoded}`);
+            addCandidate(encoded);
+            addCandidate(`/${encoded}`);
+            try {
+                const decoded = decodeURI(trimmedSrc);
+                addCandidate(`./${decoded}`);
+                addCandidate(decoded);
+                addCandidate(`/${decoded}`);
+            } catch (error) {
+                // Ignore malformed URI sequences.
+            }
+        }
+        let candidateIndex = 0;
+        image.addEventListener("error", () => {
+            candidateIndex += 1;
+            if (candidateIndex < candidates.length) {
+                image.src = candidates[candidateIndex];
+            }
+        });
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     Nav_Keyboard();
     ShopPage();
+    ShopImageFallbacks();
     CheckoutPage();
 });

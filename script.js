@@ -32,7 +32,6 @@ function checkCode() {
 
 
 
-
 function sendMessage(event) {
     event.preventDefault();
     const nameInput = document.getElementById("name");

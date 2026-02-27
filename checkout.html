@@ -1,0 +1,55 @@
+<!DOCtYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>BEAN & BREW</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>Bean & Brew</h1>
+        </header>
+        <nav>
+            <div class="navbar">
+                <a href="index.html" class="button">Home</a>
+                <a href="our_coffee.html" class="button">Our Coffee</a>
+                <a href="shop.html" class="button active">Shop</a>
+                <a href="rewards.html" class="button">Rewards</a>
+                <a href="find_us.html" class="button">Find Us</a>
+            </div>
+        </nav>
+
+        <h1 style="text-align: center; margin-top: 50px;">Checkout</h1>
+        <main class="checkout-page">
+            <section class="checkout-section">
+                <h2>Your Items</h2>
+                <ul id="checkout-items" class="checkout-list"></ul>
+                <p id="checkout-empty"></p>
+                <p id="checkout-total" class="checkout-total">Total: GBP 0.00</p>
+            </section>
+            <section class="checkout-section">
+                <h2>Payment Details</h2>
+                <form class="checkout-form" onsubmit="payOrder(event)">
+                    <label for="email">Email:(required to recive a confirmation)</label>
+                        <input type="email" id="email" name="email">
+                    <label for="card-name">Cardholder Name</label>
+                        <input type="text" id="card-name" name="card-name">
+                    <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" name="card-number">
+                    <label for="card-expiry">Expiry Date (MM/YY)</label>
+                        <input type="text" id="card-expiry" name="card-expiry">
+                    <label for="card-cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv">
+                    <fieldset class="delivery-options">
+                        <legend>Collect or Delivery</legend>
+                        <label><input type="radio"> Collect</label>
+                        <label><input type="radio"> Delivery</label>
+                    </fieldset>
+                    <button class="checkout-pay-btn" type="submit">Pay</button>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

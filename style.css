@@ -45,6 +45,27 @@ head {
     background: #eee;
 
 }
+.checkout-btn-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.checkout-count {
+    position: absolute;
+    top: -8px;
+    left: -10px;
+    min-width: 24px;
+    height: 24px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: #d10000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    display: none;
+}
 .section-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -93,6 +114,78 @@ head {
 }
 
 .checkout-btn:active {
+    background-color: #ddd;
+    border-color: #aaa;
+}
+
+.checkout-page {
+    max-width: 900px;
+    margin: 20px auto 40px;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.checkout-section {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 16px;
+    background: #fff;
+}
+
+.checkout-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.checkout-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.checkout-total {
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkout-form input {
+    padding: 8px;
+    border: 1px solid #888;
+    border-radius: 6px;
+}
+
+.delivery-options {
+    border: 1px solid #888;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.delivery-options label {
+    display: block;
+    margin-top: 6px;
+}
+
+.checkout-pay-btn {
+    margin-top: 8px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #888;
+    background: #eee;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.checkout-pay-btn:active {
     background-color: #ddd;
     border-color: #aaa;
 }

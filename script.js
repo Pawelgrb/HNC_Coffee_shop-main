@@ -248,6 +248,12 @@ function ShopImageFallbacks() {
             addCandidate(`./${trimmedSrc}`);
             addCandidate(trimmedSrc);
             addCandidate(`/${trimmedSrc}`);
+            if (/\.webp$/i.test(trimmedSrc)) {
+                const pngSrc = trimmedSrc.replace(/\.webp$/i, ".png");
+                addCandidate(`./${pngSrc}`);
+                addCandidate(pngSrc);
+                addCandidate(`/${pngSrc}`);
+            }
             const encoded = encodeURI(trimmedSrc);
             addCandidate(`./${encoded}`);
             addCandidate(encoded);
@@ -270,7 +276,46 @@ function ShopImageFallbacks() {
     });
 }
 
+function WebpFallbacks() {
+    const images = Array.from(document.querySelectorAll("img[src]"));
+    images.forEach((image) => {
+        const source = image.getAttribute("src");
+        if (!source || !/\.webp($|\?)/i.test(source)) {
+            return;
+        }
+        image.addEventListener("error", () => {
+            const currentSrc = image.getAttribute("src");
+            if (!currentSrc || !/\.webp($|\?)/i.test(currentSrc)) {
+                return;
+            }
+            image.setAttribute("src", currentSrc.replace(/\.webp($|\?)/i, ".png$1"));
+        }, { once: true });
+    });
+}
+
+function OptimizeImages() {
+    const images = Array.from(document.querySelectorAll("img"));
+    if (!images.length) {
+        return;
+    }
+    images.forEach((image, index) => {
+        if (!image.hasAttribute("decoding")) {
+            image.setAttribute("decoding", "async");
+        }
+        if (!image.hasAttribute("loading")) {
+            if (index === 0) {
+                image.setAttribute("loading", "eager");
+                image.setAttribute("fetchpriority", "high");
+            } else {
+                image.setAttribute("loading", "lazy");
+            }
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+    WebpFallbacks();
+    OptimizeImages();
     Nav_Keyboard();
     ShopPage();
     ShopImageFallbacks();

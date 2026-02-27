@@ -18,6 +18,15 @@ if (toggle && menu) {
 
 function checkCode() {
     const codeInput = document.getElementById("code");
+    if (!codeInput) return;
+
+    const code = codeInput.value.trim();
+    if (code === "") {
+        alert("Please enter a code first.");
+        codeInput.focus();
+        return;
+    }
+
     codeInput.value = "";
     alert("no luck, try another time");
 }
